@@ -124,7 +124,7 @@ text-decoration: none;
 opacity: 0.4;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1750px) {
   #main-menu {
     display: none;
   }
@@ -392,8 +392,40 @@ footer {
 
 
 /* style for view.html */
-
-footer a {
-  text-decoration: none;
-  color: black;
+.back { 
+  margin-left: 15px;
+  margin-top: 40px;
 }
+
+.back a {
+
+  text-decoration: none;
+  background-color: #F8F594;
+  padding: 0.8em;
+  border: 2px solid white;
+}
+
+.info {
+  margin-top: 30px;
+  margin-left: 15px;
+  display: flex;
+}
+
+.info h4:nth-child(2) {
+ padding-left: 3em;
+}
+
+.order__donut {
+  position: fixed;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  background-color: #F8F594;
+  width: 100%;
+  padding: 1em 0 1em 0;
+
+}
+ .order__donut a {
+  color: black;
+  text-decoration: none;
+ }

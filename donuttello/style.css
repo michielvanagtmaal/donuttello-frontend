@@ -391,4 +391,9 @@ footer {
 }
 
 
+/* style for view.html */
 
+footer a {
+  text-decoration: none;
+  color: black;
+}

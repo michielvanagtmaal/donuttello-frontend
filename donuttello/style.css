@@ -1,9 +1,13 @@
-header {
-  background-image: url(public/assets/images/donuttello_grid.png);
-}
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
 
 body {
   background-color: #FF98C9;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+header {
+  background-image: url(public/assets/images/donuttello_grid.png);
 }
 
 .overlay{

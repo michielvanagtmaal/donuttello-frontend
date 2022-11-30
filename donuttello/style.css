@@ -21,7 +21,7 @@ header {
   transition: opacity .35s, visibility .35s, height .35s;
   overflow: hidden;
   background: black;
-  z-index: -1;
+  z-index: -2;
 }
 
 #main-menu {
@@ -84,7 +84,7 @@ display: none;
 }
 
 #hamburger-menu #sidebar-menu {
-  visibilty: hidden;
+  visibility: hidden;
   position: fixed;
   top: 0;
   right: -250px;
@@ -193,10 +193,201 @@ section a {
   text-decoration: none;
 }
 
-
 footer {
   background-color: white;
   margin-top: 50px;
   padding: 20px;
   text-align: center;
 }
+
+/* style for configurator.html */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.donut-left {
+  background-color: lightgrey;
+  padding: 10px;
+  flex: 50%;
+  position: relative;
+  z-index: -1;
+
+}
+
+.options-right {
+
+  padding: 10px;
+  flex: 50%;
+
+}
+
+@media (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+.color {
+  padding-top: 50px;
+}
+
+
+.color input {
+  display: none;
+}
+
+.button {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.button span {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  background: #eeeeee;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: ease .3s;
+}
+
+.button span:hover {
+  padding: 1px;
+}
+
+.blue .button span {
+  background: #34ADF1;
+}
+
+.blue input:checked ~ .button span {
+  border:2px solid white;
+}
+
+.red .button span {
+  background: #F13462;
+}
+
+.red input:checked ~ .button span {
+  border:2px solid white;
+}
+
+
+.green .button span {
+  background: #42FF8E;
+}
+
+.green input:checked ~ .button span {
+  border:2px solid white;
+}
+
+.brown .button span {
+  background: #a74a18;
+}
+
+.brown input:checked ~ .button span {
+  border:2px solid white;
+}
+
+.upload__logo {
+  margin-top: 50px;
+}
+
+.upload__logo a {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  margin: auto;
+  background-color: #F8F594;
+  padding: 1em;
+  border: 2px solid white;
+  color: black;
+  text-decoration: none;
+}
+
+.upload__logo p {
+  font-size: 0.8em;
+}
+
+.topping {
+  margin-top: 50px;
+}
+
+.checkbox {
+  height: 20px;
+  width: 20px;
+  color: white;
+}
+
+.contact {
+  margin-top: 50px;
+  font-size: 1.2em;
+}
+
+.amount input {
+  margin-top: 10px;
+  width: 25%;
+  height: 30px;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.name {
+  margin-top: 30px;
+}
+
+.name input {
+  margin-top: 10px;
+  width: 25%;
+  height: 30px;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.email {
+  margin-top: 30px;
+}
+.email input {
+  margin-top: 10px;
+  width: 25%;
+  height: 30px;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.order {
+  margin-top: 30px;
+}
+
+.order input {
+  
+  justify-content: center;
+  width: 40%;
+  margin: auto;
+  background-color: #F8F594;
+  padding: 0.8em;
+  border: 2px solid white;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+
+

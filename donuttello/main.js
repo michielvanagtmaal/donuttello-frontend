@@ -1,29 +1,64 @@
-import './normalise.css';
 import './style.css'
 //import three
 import * as THREE from 'three';
-
+//import orbit controls
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { Loader, Material } from 'three';
+// import gltf loader
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 const scene = new THREE.Scene();
-			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+const camera = new THREE.PerspectiveCamera(
+  75,
+  window.innerWidth / window.innerHeight,
+  0.1,
+  1000
+);
 
-			const renderer = new THREE.WebGLRenderer();
-			renderer.setSize( window.innerWidth, window.innerHeight );
-			document.body.appendChild( renderer.domElement );
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
 
-			const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-			const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-			const cube = new THREE.Mesh( geometry, material );
-			scene.add( cube );
+// add orbit controls
+const controls = new OrbitControls( camera, renderer.domElement );
+controls.minDistance = 1;
+controls.maxDistance = 1;
+controls.autoRotatespeed = 30;
+controls.autoRotate = true;
 
-			camera.position.z = 5;
 
-			function animate() {
-				requestAnimationFrame( animate );
+// add ambient light
 
-				cube.rotation.x += 0.01;
-				cube.rotation.y += 0.01;
 
-				renderer.render( scene, camera );
-			};
+const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+ambientLight.position.set(1, -1, 1);
+scene.add(ambientLight);
 
-			animate();
+
+
+
+const loader = new GLTFLoader();
+
+
+loader.load("/assets/donut.glb", (gltf) => {
+  const huitfois = gltf.scene;
+  huitfois.scale.set(2, 2, 2);
+  scene.add(huitfois);
+});
+
+camera.lookAt(scene.position);
+
+
+camera.position.z = 1;
+camera.position.y = 1;
+
+
+
+function animate() {
+  
+
+  requestAnimationFrame( animate );
+  controls.update();
+	renderer.render( scene, camera );
+};
+
+	animate();

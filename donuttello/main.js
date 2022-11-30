@@ -34,6 +34,14 @@ ambientLight.position.set(1, -1, 1);
 scene.add(ambientLight);
 
 
+const geometry = new THREE.BoxGeometry( 0.17, 0.007, 0.12 );
+			const material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
+			const logo = new THREE.Mesh( geometry, material );
+            logo.position.set(0, 0.34, 0.2);
+            logo.rotation.set(0.1, 0, 0);
+			scene.add( logo );
+
+
 
 
 const loader = new GLTFLoader();
@@ -41,8 +49,8 @@ const loader = new GLTFLoader();
 
 loader.load("/assets/donut.glb", (gltf) => {
   const huitfois = gltf.scene;
-  huitfois.scale.set(2.5, 2.5, 2.5);
-  huitfois.position.set(0, 0, 0);
+  huitfois.scale.set(2.3, 2.3, 2.3);
+  huitfois.position.set(0, 0.15, 0);
   scene.add(huitfois);
   scene.background = new THREE.Color( 0xffffff );
 

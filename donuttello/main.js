@@ -43,6 +43,8 @@ loader.load("/assets/donut.glb", (gltf) => {
   const huitfois = gltf.scene;
   huitfois.scale.set(2, 2, 2);
   scene.add(huitfois);
+  scene.background = new THREE.Color( 0xffffff );
+
 });
 
 camera.lookAt(scene.position);

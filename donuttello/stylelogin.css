@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Museo Sans 700';
+  font-weight: 700;
+  src: url(/assets/Fonts/MuseoSans_700/MuseoSans_700.otf) format('otf'),;
+}
+@font-face {
+  font-family: 'Lucida Console Regular';
+  src: url(/assets/Fonts/Lucida_Console_Regular/Lucida_Console.ttf) format('ttf');
+}
+body {
+  background-color: #FF98C9;
+}

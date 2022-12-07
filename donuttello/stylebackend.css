@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
-
+@font-face {
+  font-family: 'Museo Sans 700';
+  font-weight: 700;
+  src: url(/assets/Fonts/MuseoSans_700/MuseoSans_700.otf) format('otf'),;
+}
+@font-face {
+  font-family: 'Lucida Console Regular';
+  src: url(/assets/Fonts/Lucida_Console_Regular/Lucida_Console.ttf) format('ttf');
+}
 body {
   background-color: #FF98C9;
-  font-family: 'IBM Plex Mono', monospace;
 }
 
 header {
@@ -214,23 +221,23 @@ footer {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset -2px -2px 0px #262626, inset 2px 2px 0px #F0F0F0, inset -4px -4px 0px #7E7E7E;
 }
 .container {
-  display: grid;
-  grid-template-columns: 50px 250px 100px 100px 100px 100px;
-  grid-template-rows: 50px 100px 50px 50px 50px 50px 50px;
+  display: inline-grid;
+  grid-template-columns: 50px 355px  335px  250px;
+  grid-template-rows: 50px 100px 100px 100px 50px 100px 100px;
   grid-template-areas: 
-    ". . . . . ."
-    ". customer_name  glazuur glazuur logo logo"
-    ". donut glazuur glazuur logo logo"
-    ". donut topping topping status status"
-    ". donut topping topping status status"
-    ". aantal  email . . ."
-    ". aantal  email . . .";
-  background-color: #7E7E7E;
+    ". . . ."
+    ". customer_name glazuur logo"
+    ". donut glazuur  logo"
+    ". donut topping status"
+    ". donut topping status"
+    ". aantal  email ."
+    ". aantal  email .";
+  /*background-color: #7E7E7E;*/
   }
 
 .donut {
-  width: 20%;
-  height: 20%;
+  width: 70%;
+  height: 70%;
   grid-area: donut;
   /*position: relative;
   top: 60px;
@@ -238,6 +245,8 @@ footer {
 }
 .customer_name {
   grid-area: customer_name;
+  font-size: 2.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace; 
   /*position: relative;
   top: 60px;
   left: 40px;*/
@@ -248,11 +257,27 @@ footer {
   top: 60px;
   left: 40px;*/
 }
+.glazuur-thing{
+  font-size: 1.625em;
+  font-family: 'Lucida Console Regular', monospace;
+}
+.glazuur-title{
+  font-size: 2.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular';
+}
 .topping {
   grid-area: topping;
   /*position: relative;
   top: 60px;
   left: 40px;*/
+}
+.topping-thing{
+  font-size: 1.625em;
+  font-family: 'Lucida Console Regular',monospace;
+}
+.topping-title{
+  font-size: 2.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
 }
 .aantal {
   grid-area: aantal;
@@ -260,11 +285,27 @@ footer {
   top: 60px;
   left: 40px;*/
 }
+.aantal-thing{
+  font-size: 1.625em;
+  font-family: 'Lucida Console Regular', monospace;
+}
+.aantal-title{
+  font-size: 2.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
+}
 .email {
   grid-area: email;
   /*position: relative;
   top: 60px;
   left: 40px;*/
+}
+.email-title{
+  font-size: 2.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
+}
+.email-thing{
+  font-size: 1.625em;
+  font-family: 'Lucida Console Regular', monospace;
 }
 .status {
   grid-area: status;
@@ -272,13 +313,25 @@ footer {
   top: 60px;
   left: 40px;*/
 }
+.status-thing{
+  font-size: 1.625em;
+  font-family: 'Lucida Console Regular', monospace;
+}
+.status-title{
+  font-size: 2.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
+}
 .logo {
   grid-area: logo;
   /*position: relative;
   top: 60px;
   left: 40px;*/
-  width:  20% ;
-  height: 20%;
+  width:  50% ;
+  height: 50%;
+}
+.logo-title{
+  font-size: 2.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
 }
 
 

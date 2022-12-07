@@ -213,16 +213,72 @@ footer {
   /* Windows 95 Button */
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset -2px -2px 0px #262626, inset 2px 2px 0px #F0F0F0, inset -4px -4px 0px #7E7E7E;
 }
-/*.order_form {
-  margin: 50px;
-  width: 989px;
-  height: 1808px;
-  left: 46px;
-  top: 225px;
-  background: #C4C4C4;
-  /* Windows 95 Button */
- /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset -2px -2px 0px #262626, inset 2px 2px 0px #F0F0F0, inset -4px -4px 0px #7E7E7E;
-}*/
+.container {
+  display: grid;
+  grid-template-columns: 50px 250px 100px 100px 100px 100px;
+  grid-template-rows: 50px 100px 50px 50px 50px 50px 50px;
+  grid-template-areas: 
+    ". . . . . ."
+    ". customer_name  glazuur glazuur logo logo"
+    ". donut glazuur glazuur logo logo"
+    ". donut topping topping status status"
+    ". donut topping topping status status"
+    ". aantal  email . . ."
+    ". aantal  email . . .";
+  background-color: #7E7E7E;
+  }
 
+.donut {
+  width: 20%;
+  height: 20%;
+  grid-area: donut;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.customer_name {
+  grid-area: customer_name;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.glazuur {
+  grid-area: glazuur;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.topping {
+  grid-area: topping;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.aantal {
+  grid-area: aantal;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.email {
+  grid-area: email;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.status {
+  grid-area: status;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.logo {
+  grid-area: logo;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+  width:  20% ;
+  height: 20%;
+}
 
 

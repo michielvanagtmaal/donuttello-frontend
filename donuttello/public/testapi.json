@@ -1,0 +1,24 @@
+{
+    "status": "success",
+    "order": [
+        {
+            "customer": "Steve",
+            "glazuur": "ee8f2a",
+            "logo": "/assets/images/donut_img.png",
+            "topping": "sprinkles",
+            "status": "in behandeling",
+            "aantal": "250",
+            "email": "google@gmail.com"
+        },
+        {
+            "customer": "Alex",
+            "glazuur": "efr52a",
+            "logo": "/assets/images/donut_img.png",
+            "topping": "sprinkles",
+            "status": "Afgehandeld",
+            "aantal": "550",
+            "email": "amazon@gmail.com"
+        }
+    ]
+
+}

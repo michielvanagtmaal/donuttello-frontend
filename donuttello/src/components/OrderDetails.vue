@@ -1,3 +1,24 @@
+<script setup>
+import { ref, reactive, onMounted } from 'vue';
+
+    let users = ref([]);
+    let texts = ref("");
+    //onmounted
+    onMounted (() => {
+        //let api_url = 'http://127.0.0.1:5173/toktik.json';
+        const api = 'http://127.0.0.1:5173/testapi.json';
+        fetch(api)
+        .then(response => response.json())
+        .then (data => {
+            console.log(data);
+            customer.value = data;
+
+        })
+    });
+</script>
+
+
+
 <template>
    <div class="container">
         <p class="customer_name">Customer name</p>

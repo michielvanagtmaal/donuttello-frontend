@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+@font-face {
+  font-family: 'Museo Sans 700';
+  font-weight: 700;
+  src: url(/assets/Fonts/MuseoSans_700/MuseoSans_700.otf) format('otf'),;
+}
+@font-face {
+  font-family: 'Lucida Console Regular';
+  src: url(/assets/Fonts/Lucida_Console_Regular/Lucida_Console.ttf) format('ttf');
+}
+body {
+  background-color: #FF98C9;
+}
+
+header {
+  background-image: url(/assets/images/donuttello_grid.png);
+  box-shadow: inset -2px -2px 0px #262626, inset 2px 2px 0px #F0F0F0, inset -4px -4px 0px #7E7E7E;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+
+/*mobile*/
+/*put .order form in the middle of a 1080px wide screen*/
+.order_form {
+  margin: 50px;
+  width: 989px;
+  height: 1808px;
+  left: 46px;
+  top: 225px;
+  background: #C4C4C4;
+  /* Windows 95 Button */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset -2px -2px 0px #262626, inset 2px 2px 0px #F0F0F0, inset -4px -4px 0px #7E7E7E;
+}
+.container {
+  display: inline-grid;
+  grid-template-columns: 50px 355px  335px  250px;
+  grid-template-rows: 50px 100px 100px 100px 50px 100px 100px;
+  grid-template-areas: 
+    ". . . ."
+    ". customer_name glazuur logo"
+    ". donut glazuur  logo"
+    ". donut topping status"
+    ". donut topping status"
+    ". aantal  email ."
+    ". aantal  email .";
+  /*background-color: #7E7E7E;*/
+  }
+
+.donut {
+  width: 70%;
+  height: 70%;
+  grid-area: donut;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.customer_name {
+  grid-area: customer_name;
+  font-size: 2.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace; 
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.glazuur {
+  grid-area: glazuur;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.glazuur-thing{
+  font-size: 1.625em;
+  font-family: 'Lucida Console Regular', monospace;
+}
+.glazuur-title{
+  font-size: 2.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular';
+}
+.topping {
+  grid-area: topping;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.topping-thing{
+  font-size: 1.625em;
+  font-family: 'Lucida Console Regular',monospace;
+}
+.topping-title{
+  font-size: 2.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
+}
+.aantal {
+  grid-area: aantal;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.aantal-thing{
+  font-size: 1.625em;
+  font-family: 'Lucida Console Regular', monospace;
+}
+.aantal-title{
+  font-size: 2.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
+}
+.email {
+  grid-area: email;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.email-title{
+  font-size: 2.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
+}
+.email-thing{
+  font-size: 1.625em;
+  font-family: 'Lucida Console Regular', monospace;
+}
+.status {
+  grid-area: status;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.status-thing{
+  font-size: 1.625em;
+  font-family: 'Lucida Console Regular', monospace;
+}
+.status-title{
+  font-size: 2.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
+}
+.logo {
+  grid-area: logo;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+  width:  50% ;
+  height: 50%;
+}
+.logo-title{
+  font-size: 2.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
+}
+
+

@@ -6,6 +6,11 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { Loader, Material } from 'three';
 // import gltf loader
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+
+import Donut from "./Donut/Donut.js"
+
+const donut = new Donut(document.querySelector(".donut-canvas"));
+
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
   75,
@@ -62,8 +67,6 @@ loader.load("/assets/lowpolydonut_dough.glb", (gltf) => {
   dough.scale.set(7, 7, 7);
   dough.position.set(0, 0.13, 0);
   scene.add(dough);
-  scene.background = new THREE.Color( 0xffffff );
-
 });
 
 const loader2 = new GLTFLoader();
@@ -73,7 +76,7 @@ loader2.load("/assets/lowpolydonut_icing_blue.glb", (gltf) => {
   icing.scale.set(7.35, 7.35, 7.35);
   icing.position.set(0, 0.15, 0);
   scene.add(icing);
-  scene.background = new THREE.Color( 0xffffff );
+ 
 
 });
 
@@ -83,8 +86,11 @@ loader3.load("/assets/lowpolydonut_sprinkles.glb", (gltf) => {
   const sprinkles = gltf.scene;
   sprinkles.scale.set(9.5, 7.5, 9.5);
   sprinkles.position.set(0, 0.22, 0);
+  // background color 
+  renderer.setClearColor(0xFF98C9, 1);
   scene.add(sprinkles);
-  scene.background = new THREE.Color( 0xffffff );
+
+
 
 });
 
@@ -92,8 +98,8 @@ loader3.load("/assets/lowpolydonut_sprinkles.glb", (gltf) => {
 camera.lookAt(scene.position);
 
 
-camera.position.z = 1;
-camera.position.y = 1;
+camera.position.z = 5;
+camera.position.y = 4;
 camera.lookAt(scene.position);
 
 

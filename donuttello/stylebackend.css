@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
-
+@font-face {
+  font-family: 'Museo Sans 700';
+  font-weight: 700;
+  src: url(/assets/Fonts/MuseoSans_700/MuseoSans_700.otf) format('otf'),;
+}
+@font-face {
+  font-family: 'Lucida Console Regular';
+  src: url(/assets/Fonts/Lucida_Console_Regular/Lucida_Console.ttf) format('ttf');
+}
 body {
   background-color: #FF98C9;
-  font-family: 'IBM Plex Mono', monospace;
 }
 
 header {
-  background-image: url(public/assets/images/donuttello_grid.png);
+  background-image: url(/assets/images/donuttello_grid.png);
   box-shadow: inset -2px -2px 0px #262626, inset 2px 2px 0px #F0F0F0, inset -4px -4px 0px #7E7E7E;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
@@ -136,7 +143,7 @@ opacity: 0.4;
 }
 
 section {
-  background-image: url(public/assets/images/hero_image.png);
+  background-image: url(/assets/images/hero_image.png);
   background-size: cover;
   margin-left: 15px;
   margin-right: 15px;
@@ -202,193 +209,131 @@ footer {
   text-align: center;
 }
 
-/* style for configurator.html */
 
+/*mobile*/
+/*put .order form in the middle of a 1080px wide screen*/
+.order_form {
+  margin: 50px;
+  width: 989px;
+  height: 1808px;
+  left: 46px;
+  top: 225px;
+  background: #C4C4C4;
+  /* Windows 95 Button */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset -2px -2px 0px #262626, inset 2px 2px 0px #F0F0F0, inset -4px -4px 0px #7E7E7E;
+}
 .container {
-  display: flex;
-  flex-direction: row;
-  font-size: 30px;
-  text-align: center;
-  font-size: 1em;
-}
-
-.donut-left {
-  background-color: lightgrey;
-  padding: 10px;
-  flex: 50%;
-  position: relative;
-  z-index: -1;
-
-}
-
-.options-right {
-
-  padding: 10px;
-  flex: 50%;
-
-}
-
-@media (max-width: 1000px) {
-  .container {
-    flex-direction: column;
+  display: inline-grid;
+  grid-template-columns: 50px 355px  335px  250px;
+  grid-template-rows: 50px 100px 100px 100px 50px 100px 100px;
+  grid-template-areas: 
+    ". . . ."
+    ". customer_name glazuur logo"
+    ". donut glazuur  logo"
+    ". donut topping status"
+    ". donut topping status"
+    ". aantal  email ."
+    ". aantal  email .";
+  /*background-color: #7E7E7E;*/
   }
+
+.donut {
+  width: 70%;
+  height: 70%;
+  grid-area: donut;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
 }
-
-.color {
-  padding-top: 50px;
+.customer_name {
+  grid-area: customer_name;
+  font-size: 2.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace; 
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
 }
-
-
-.color input {
-  display: none;
+.glazuur {
+  grid-area: glazuur;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
 }
-
-.button {
-  display: inline-block;
-  position: relative;
-  width: 30px;
-  height: 30px;
-  margin: 2px;
-  cursor: pointer;
+.glazuur-thing{
+  font-size: 1.625em;
+  font-family: 'Lucida Console Regular', monospace;
 }
-
-.button span {
-  display: block;
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  border-radius: 100%;
-  background: #eeeeee;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-  transition: ease .3s;
+.glazuur-title{
+  font-size: 2.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular';
 }
-
-.button span:hover {
-  padding: 1px;
-}
-
-.blue .button span {
-  background: #34ADF1;
-}
-
-.blue input:checked ~ .button span {
-  border:2px solid white;
-}
-
-.red .button span {
-  background: #F13462;
-}
-
-.red input:checked ~ .button span {
-  border:2px solid white;
-}
-
-
-.green .button span {
-  background: #42FF8E;
-}
-
-.green input:checked ~ .button span {
-  border:2px solid white;
-}
-
-.brown .button span {
-  background: #a74a18;
-}
-
-.brown input:checked ~ .button span {
-  border:2px solid white;
-}
-
-.upload__logo {
-  margin-top: 50px;
-}
-
-.upload__logo a {
-  display: flex;
-  justify-content: center;
-  width: 30%;
-  margin: auto;
-  background-color: #F8F594;
-  padding: 1em;
-  border: 2px solid white;
-  color: black;
-  text-decoration: none;
-}
-
-.upload__logo p {
-  font-size: 0.8em;
-}
-
 .topping {
-  margin-top: 50px;
+  grid-area: topping;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
 }
-
-.checkbox {
-  height: 20px;
-  width: 20px;
-  color: white;
+.topping-thing{
+  font-size: 1.625em;
+  font-family: 'Lucida Console Regular',monospace;
 }
-
-.contact {
-  margin-top: 50px;
-  font-size: 1.2em;
+.topping-title{
+  font-size: 2.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
 }
-
-.amount input {
-  margin-top: 10px;
-  width: 25%;
-  height: 30px;
-  text-align: center;
-  font-size: 0.8em;
+.aantal {
+  grid-area: aantal;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
 }
-
-.name {
-  margin-top: 30px;
+.aantal-thing{
+  font-size: 1.625em;
+  font-family: 'Lucida Console Regular', monospace;
 }
-
-.name input {
-  margin-top: 10px;
-  width: 25%;
-  height: 30px;
-  text-align: center;
-  font-size: 0.8em;
+.aantal-title{
+  font-size: 2.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
 }
-
 .email {
-  margin-top: 30px;
+  grid-area: email;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
 }
-.email input {
-  margin-top: 10px;
-  width: 25%;
-  height: 30px;
-  text-align: center;
-  font-size: 0.8em;
+.email-title{
+  font-size: 2.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
 }
-
-.order {
-  margin-top: 30px;
+.email-thing{
+  font-size: 1.625em;
+  font-family: 'Lucida Console Regular', monospace;
 }
-
-.order input {
-  
-  justify-content: center;
-  width: 40%;
-  margin: auto;
-  background-color: #F8F594;
-  padding: 0.8em;
-  border: 2px solid white;
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 1em;
+.status {
+  grid-area: status;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.status-thing{
+  font-size: 1.625em;
+  font-family: 'Lucida Console Regular', monospace;
+}
+.status-title{
+  font-size: 2.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
+}
+.logo {
+  grid-area: logo;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+  width:  50% ;
+  height: 50%;
+}
+.logo-title{
+  font-size: 2.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
 }
 
 

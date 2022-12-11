@@ -1,17 +1,19 @@
 <script setup>
 import { ref, reactive, onMounted } from 'vue';
 
-    let users = ref([]);
-    let texts = ref("");
+    let customer_name = ref('');
+    let aantal = ref('');
+
     //onmounted
     onMounted (() => {
         //let api_url = 'http://127.0.0.1:5173/toktik.json';
-        const api = 'http://127.0.0.1:5173/testapi.json';
+        const api = '/testapi.json';
         fetch(api)
         .then(response => response.json())
         .then (data => {
             console.log(data);
-            customer.value = data;
+            customer_name.value =  data.order[0].customer;
+            aantal.value = data.order[0].aantal;
 
         })
     });
@@ -21,11 +23,11 @@ import { ref, reactive, onMounted } from 'vue';
 
 <template>
    <div class="container">
-        <p class="customer_name">Customer name</p>
+        <p class="customer_name">{{customer_name}}</p>
         <img class="donut" src="assets/images/donut_img.png" alt="">
         <div class="aantal">
           <p class="aantal-title">Aantal</p>
-          <p class="aantal-thing">placeholder aantal</p>
+          <p class="aantal-thing">{{aantal}}</p>
         </div>
         <div class="glazuur">
           <p class="glazuur glazuur-title">Glazuur</p>

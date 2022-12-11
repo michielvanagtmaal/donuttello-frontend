@@ -32,15 +32,22 @@ const clientTexture = textureloaderClient.load('public/assets/images/donuttello_
 // add ambient light
 
 
-const ambientLight = new THREE.AmbientLight(0xffffff, 1);
-ambientLight.position.set(1, -1, 1);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
 scene.add(ambientLight);
+
+// add directional light
+
+const directionalLight = new THREE.DirectionalLight(0xffffff, 0.6);
+directionalLight.position.set(0, 1, 0);
+scene.add(directionalLight);
 
 
 const geometry = new THREE.BoxGeometry( 0.17, 0.007, 0.12 );
 const material = new THREE.MeshBasicMaterial( { map: clientTexture } );
 const cube = new THREE.Mesh( geometry, material );
-cube.position.set(0, 0.15, 0);
+cube.position.set(-0.1, 0.265, -0.162);
+cube.rotation.x = -0.2;
+cube.rotation.y = 0.2;
 scene.add( cube );
 
 
@@ -50,15 +57,37 @@ scene.add( cube );
 
 const loader = new GLTFLoader();
 
-
-loader.load("/assets/donut.glb", (gltf) => {
-  const huitfois = gltf.scene;
-  huitfois.scale.set(2.3, 2.3, 2.3);
-  huitfois.position.set(0, 0.15, 0);
-  scene.add(huitfois);
+loader.load("/assets/lowpolydonut_dough.glb", (gltf) => {
+  const dough = gltf.scene;
+  dough.scale.set(7, 7, 7);
+  dough.position.set(0, 0.13, 0);
+  scene.add(dough);
   scene.background = new THREE.Color( 0xffffff );
 
 });
+
+const loader2 = new GLTFLoader();
+
+loader2.load("/assets/lowpolydonut_icing_blue.glb", (gltf) => {
+  const icing = gltf.scene;
+  icing.scale.set(7.35, 7.35, 7.35);
+  icing.position.set(0, 0.15, 0);
+  scene.add(icing);
+  scene.background = new THREE.Color( 0xffffff );
+
+});
+
+const loader3 = new GLTFLoader();
+
+loader3.load("/assets/lowpolydonut_sprinkles.glb", (gltf) => {
+  const sprinkles = gltf.scene;
+  sprinkles.scale.set(8.9, 7.5, 8.9);
+  sprinkles.position.set(0, 0.22, 0);
+  scene.add(sprinkles);
+  scene.background = new THREE.Color( 0xffffff );
+
+});
+
 
 camera.lookAt(scene.position);
 

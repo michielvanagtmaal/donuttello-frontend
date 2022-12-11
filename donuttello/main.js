@@ -38,13 +38,12 @@ scene.add(ambientLight);
 
 
 const geometry = new THREE.BoxGeometry( 0.17, 0.007, 0.12 );
-const geometryMaterial = new THREE.MeshBasicMaterial( {color: 0xaaaaaa} );
-geometryMaterial.map = clientTexture;
-geometryMaterial.side = THREE.DoubleSide;
-const geometryMesh = new THREE.Mesh( geometry, geometryMaterial );
-            logo.position.set(0, 0.34, 0.2);
-            logo.rotation.set(0.1, 0, 0);
-			scene.add( logo );
+const material = new THREE.MeshBasicMaterial( { map: clientTexture } );
+const cube = new THREE.Mesh( geometry, material );
+cube.position.set(0, 0.15, 0);
+scene.add( cube );
+
+
 
 
 

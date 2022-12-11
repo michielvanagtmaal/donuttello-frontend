@@ -12,6 +12,11 @@ header {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
+.logo {
+  max-width: 120px;
+  max-height: 120px;
+}
+
 .overlay{
   position: fixed;
   top: 0;
@@ -66,7 +71,7 @@ display: none;
 
 #hamburger-menu {
   position: absolute;
-  top: 50px;
+  top: 30px;
   right: 20px;
   width: 40px;
   height: 30px;
@@ -126,7 +131,7 @@ text-decoration: none;
 opacity: 0.4;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1750px) {
   #main-menu {
     display: none;
   }
@@ -200,6 +205,7 @@ footer {
   margin-top: 50px;
   padding: 20px;
   text-align: center;
+
 }
 
 /* style for configurator.html */
@@ -392,3 +398,41 @@ footer {
 }
 
 
+/* style for view.html */
+.back { 
+  margin-left: 15px;
+  margin-top: 40px;
+}
+
+.back a {
+
+  text-decoration: none;
+  background-color: #F8F594;
+  padding: 0.8em;
+  border: 2px solid white;
+}
+
+.info {
+  margin-top: 30px;
+  margin-left: 15px;
+  display: flex;
+}
+
+.info h4:nth-child(2) {
+ padding-left: 3em;
+}
+
+.order__donut {
+  position: fixed;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  background-color: #F8F594;
+  width: 100%;
+  padding: 1em 0 1em 0;
+
+}
+ .order__donut a {
+  color: black;
+  text-decoration: none;
+ }

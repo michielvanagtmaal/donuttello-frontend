@@ -26,6 +26,9 @@ controls.autoRotatespeed = 30;
 controls.autoRotate = true;
 
 
+const textureloaderClient = new THREE.TextureLoader();
+const clientTexture = textureloaderClient.load('public/assets/images/donuttello_grid.png');
+
 // add ambient light
 
 
@@ -35,8 +38,10 @@ scene.add(ambientLight);
 
 
 const geometry = new THREE.BoxGeometry( 0.17, 0.007, 0.12 );
-			const material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
-			const logo = new THREE.Mesh( geometry, material );
+const geometryMaterial = new THREE.MeshBasicMaterial( {color: 0xaaaaaa} );
+geometryMaterial.map = clientTexture;
+geometryMaterial.side = THREE.DoubleSide;
+const geometryMesh = new THREE.Mesh( geometry, geometryMaterial );
             logo.position.set(0, 0.34, 0.2);
             logo.rotation.set(0.1, 0, 0);
 			scene.add( logo );

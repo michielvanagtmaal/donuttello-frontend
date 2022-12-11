@@ -45,7 +45,7 @@ scene.add(directionalLight);
 const geometry = new THREE.BoxGeometry( 0.17, 0.007, 0.12 );
 const material = new THREE.MeshBasicMaterial( { map: clientTexture } );
 const cube = new THREE.Mesh( geometry, material );
-cube.position.set(-0.1, 0.265, -0.162);
+cube.position.set(-0.1, 0.265, -0.197);
 cube.rotation.x = -0.2;
 cube.rotation.y = 0.2;
 scene.add( cube );
@@ -81,7 +81,7 @@ const loader3 = new GLTFLoader();
 
 loader3.load("/assets/lowpolydonut_sprinkles.glb", (gltf) => {
   const sprinkles = gltf.scene;
-  sprinkles.scale.set(8.9, 7.5, 8.9);
+  sprinkles.scale.set(9.5, 7.5, 9.5);
   sprinkles.position.set(0, 0.22, 0);
   scene.add(sprinkles);
   scene.background = new THREE.Color( 0xffffff );

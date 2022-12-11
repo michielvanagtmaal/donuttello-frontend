@@ -32,7 +32,7 @@ controls.autoRotate = true;
 
 
 const textureloaderClient = new THREE.TextureLoader();
-const clientTexture = textureloaderClient.load('public/assets/images/donuttello_grid.png');
+const clientTexture = textureloaderClient.load('public/assets/images/logo.png');
 
 // add ambient light
 
@@ -47,12 +47,12 @@ directionalLight.position.set(0, 1, 0);
 scene.add(directionalLight);
 
 
-const geometry = new THREE.BoxGeometry( 0.17, 0.007, 0.12 );
+const geometry = new THREE.BoxGeometry( 0.18, 0.007, 0.11 );
 const material = new THREE.MeshBasicMaterial( { map: clientTexture } );
 const cube = new THREE.Mesh( geometry, material );
 cube.position.set(-0.1, 0.265, -0.197);
 cube.rotation.x = -0.2;
-cube.rotation.y = 0.2;
+cube.rotation.y = -9;
 scene.add( cube );
 
 

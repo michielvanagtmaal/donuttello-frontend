@@ -170,8 +170,12 @@ loader3.load("/assets/lowpolydonut_sprinkles.glb", (gltf) => {
 var btnSprinkles = document.getElementById("btnSprinkles");
 btnSprinkles.addEventListener("click", () => {
   console.log("clicked");
+  if (sprinkles.scale.x == 0) {
     sprinkles.scale.set(9.1, 9.1, 9.1);
-  });
+  } else { 
+    sprinkles.scale.set(0, 0, 0);
+
+ } });
 
 });
 

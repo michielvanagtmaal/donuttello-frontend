@@ -14,10 +14,10 @@ import Donut from "./Donut/Donut.js"
 const scene = new THREE.Scene();
 const sizes = {
   width: 800,
-  height: 600
+  height: 500
 }
 const camera = new THREE.PerspectiveCamera(
-  75,
+  50,
   sizes.width / sizes.height,
   0.1,
   1000
@@ -170,8 +170,12 @@ loader3.load("/assets/lowpolydonut_sprinkles.glb", (gltf) => {
 var btnSprinkles = document.getElementById("btnSprinkles");
 btnSprinkles.addEventListener("click", () => {
   console.log("clicked");
+  if (sprinkles.scale.x == 0) {
     sprinkles.scale.set(9.1, 9.1, 9.1);
-  });
+  } else { 
+    sprinkles.scale.set(0, 0, 0);
+
+ } });
 
 });
 

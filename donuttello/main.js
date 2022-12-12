@@ -58,12 +58,6 @@ cube2.rotation.y = -9;
 scene.add( cube2 );
 
 
-// make a green cube
-const geometry = new THREE.BoxGeometry( 0.2, 0.2, 0.2 );
-var material = new THREE.MeshLambertMaterial({color: 0xFF0000});
-const cube = new THREE.Mesh( geometry, material );
-cube.position.set(-0.1, 0.299, -0.197);
-scene.add( cube );
 
 
 const loader = new GLTFLoader();
@@ -80,19 +74,76 @@ const loader2 = new GLTFLoader();
 loader2.load("/assets/lowpolydonut_icing_blue.glb", (gltf) => {
   const icing = gltf.scene;
 
-  icing.scale.set(6.5, 6.5, 6.5);
+  icing.scale.set(6.5,6.5,6.5);
   icing.position.set(0, 0.1, 0);
   scene.add(icing);
- 
+
+loader2.load("/assets/lowpolydonut_icing_red.glb", (gltf) => {
+  const icingRed = gltf.scene;
+
+  icingRed.scale.set(0,0,0);
+  icingRed.position.set(0, 0.1, 0);
+  scene.add(icingRed);
+
+loader2.load("/assets/lowpolydonut_icing_green.glb", (gltf) => {
+    const icingGreen = gltf.scene;
+  
+    icingGreen.scale.set(0,0,0);
+    icingGreen.position.set(0, 0.1, 0);
+    scene.add(icingGreen);
+
+loader2.load("/assets/lowpolydonut_icing_brown.glb", (gltf) => {
+      const icingBrown = gltf.scene;
+    
+      icingBrown.scale.set(0,0,0);
+      icingBrown.position.set(0, 0.1, 0);
+      scene.add(icingBrown);
+
+  
+
+  var btnBlue = document.getElementById("btnBlue");
+btnBlue.addEventListener("click", () => {
+  console.log("clicked");
+    icing.scale.set(6.5, 6.5, 6.5);
+    icingRed.scale.set(0,0,0);
+    icingGreen.scale.set(0,0,0);
+    icingBrown.scale.set(0,0,0);
+  });
+
+  var btnRed = document.getElementById("btnRed");
+  btnRed.addEventListener("click", () => {
+    console.log("clicked");
+      icing.scale.set(0, 0, 0);
+      icingRed.scale.set(6.5,6.5,6.5);
+      icingGreen.scale.set(0,0,0);
+      icingBrown.scale.set(0,0,0);
+    });
+
+    var btnGreen = document.getElementById("btnGreen");
+  btnGreen.addEventListener("click", () => {
+    console.log("clicked");
+      icing.scale.set(0, 0, 0);
+      icingGreen.scale.set(6.5,6.5,6.5);
+      icingRed.scale.set(0,0,0);
+      icingBrown.scale.set(0,0,0);
+    });
+
+
+    var btnBrown = document.getElementById("btnBrown");
+    btnBrown.addEventListener("click", () => {
+      console.log("clicked");
+        icing.scale.set(0, 0, 0);
+        icingBrown.scale.set(6.5,6.5,6.5);
+        icingRed.scale.set(0,0,0);
+        icingGreen.scale.set(0,0,0);
+      });
 
 });
+});
+});
+});
 
-// change color of mesh
-var btn = document.getElementById("btn");
-btn.addEventListener("click", () => {
-  console.log("clicked");
-    cube.material.visible = false;
-    cube.material.color.setHex( 0xcf4f8f );});
+
 
 
 

@@ -219,13 +219,14 @@ footer {
 }
 
 .donut-left {
-  background-color: lightgrey;
+  background-color: blue;
   padding: 10px;
   flex: 50%;
   position: relative;
   z-index: -1;
 
 }
+
 
 
 

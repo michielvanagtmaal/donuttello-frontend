@@ -9,19 +9,28 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 import Donut from "./Donut/Donut.js"
 
-const donut = new Donut(document.querySelector(".donut-canvas"));
+//const donut = new Donut(document.querySelector(".donut-canvas"));
 
 const scene = new THREE.Scene();
+const sizes = {
+  width: 800,
+  height: 600
+}
 const camera = new THREE.PerspectiveCamera(
   75,
-  window.innerWidth / window.innerHeight,
+  sizes.width / sizes.height,
   0.1,
   1000
 );
+const canvas = document.getElementById('donut-canvas')
 
-const renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
+const renderer = new THREE.WebGLRenderer({
+  canvas: canvas,
+  alpha: true,
+  antialias: true 
+});
+renderer.setSize(sizes.width, sizes.height);
+//document.body.appendChild(renderer.domElement);
 
 // add orbit controls
 const controls = new OrbitControls( camera, renderer.domElement );
@@ -155,7 +164,6 @@ loader3.load("/assets/lowpolydonut_sprinkles.glb", (gltf) => {
   sprinkles.scale.set(0, 0, 0);
   sprinkles.position.set(0, 0.15, 0);
   // background color 
-  renderer.setClearColor(0xFF98C9, 1);
   scene.add(sprinkles);
 
 

@@ -331,7 +331,7 @@ footer {
   margin-top: 50px;
 }
 
-.upload__logo a {
+#userImage {
   display: flex;
   justify-content: center;
   width: 30%;

@@ -39,11 +39,27 @@ controls.maxDistance = 1;
 controls.autoRotatespeed = 30;
 controls.autoRotate = true;
 
-
-
 // add texture
 const textureloaderClient = new THREE.TextureLoader();
 const clientTexture = textureloaderClient.load('public/assets/images/logo.png');
+
+// user upload image
+
+/* function init(){
+  document.getElementById("userImage").addEventListener("change", function(e){
+    var userImage = e.target.files[0];
+    var userImageURL = URL.createObjectURL(userImage);
+
+    var textureloaderClient = new THREE.TextureLoader();
+    loader.setCrossOrigin("");
+    var clientTexture = textureloaderClient.load(userImageURL);
+
+
+  }
+    );
+} */
+
+
 
 // add ambient light
 
@@ -56,6 +72,7 @@ scene.add(ambientLight);
 const directionalLight = new THREE.DirectionalLight(0xffffff, 0.6);
 directionalLight.position.set(0, 1, 0);
 scene.add(directionalLight);
+
 
 
 const geometry2 = new THREE.BoxGeometry( 0.18, 0.007, 0.11 );

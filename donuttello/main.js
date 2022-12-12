@@ -31,6 +31,8 @@ controls.autoRotatespeed = 30;
 controls.autoRotate = true;
 
 
+
+// add texture
 const textureloaderClient = new THREE.TextureLoader();
 const clientTexture = textureloaderClient.load('public/assets/images/logo.png');
 
@@ -47,17 +49,21 @@ directionalLight.position.set(0, 1, 0);
 scene.add(directionalLight);
 
 
-const geometry = new THREE.BoxGeometry( 0.18, 0.007, 0.11 );
-const material = new THREE.MeshBasicMaterial( { map: clientTexture } );
+const geometry2 = new THREE.BoxGeometry( 0.18, 0.007, 0.11 );
+const material2 = new THREE.MeshBasicMaterial( { map: clientTexture } );
+const cube2 = new THREE.Mesh( geometry2, material2 );
+cube2.position.set(-0.1, 0.199, -0.197);
+cube2.rotation.x = -0.2;
+cube2.rotation.y = -9;
+scene.add( cube2 );
+
+
+// make a green cube
+const geometry = new THREE.BoxGeometry( 0.2, 0.2, 0.2 );
+var material = new THREE.MeshLambertMaterial({color: 0xFF0000});
 const cube = new THREE.Mesh( geometry, material );
-cube.position.set(-0.1, 0.199, -0.197);
-cube.rotation.x = -0.2;
-cube.rotation.y = -9;
+cube.position.set(-0.1, 0.299, -0.197);
 scene.add( cube );
-
-
-
-
 
 
 const loader = new GLTFLoader();
@@ -73,6 +79,7 @@ const loader2 = new GLTFLoader();
 
 loader2.load("/assets/lowpolydonut_icing_blue.glb", (gltf) => {
   const icing = gltf.scene;
+
   icing.scale.set(6.5, 6.5, 6.5);
   icing.position.set(0, 0.1, 0);
   scene.add(icing);
@@ -80,19 +87,41 @@ loader2.load("/assets/lowpolydonut_icing_blue.glb", (gltf) => {
 
 });
 
+// change color of mesh
+var btn = document.getElementById("btn");
+btn.addEventListener("click", () => {
+  console.log("clicked");
+    cube.material.visible = false;
+    cube.material.color.setHex( 0xcf4f8f );});
+
+
+
 const loader3 = new GLTFLoader();
 
 loader3.load("/assets/lowpolydonut_sprinkles.glb", (gltf) => {
   const sprinkles = gltf.scene;
-  sprinkles.scale.set(9.1, 9.1, 9.1);
+
+  sprinkles.scale.set(0, 0, 0);
   sprinkles.position.set(0, 0.15, 0);
   // background color 
   renderer.setClearColor(0xFF98C9, 1);
   scene.add(sprinkles);
 
 
+var btnSprinkles = document.getElementById("btnSprinkles");
+btnSprinkles.addEventListener("click", () => {
+  console.log("clicked");
+    sprinkles.scale.set(9.1, 9.1, 9.1);
+  });
 
 });
+
+
+
+
+
+
+
 
 
 camera.lookAt(scene.position);
@@ -101,6 +130,9 @@ camera.lookAt(scene.position);
 camera.position.z = 7;
 camera.position.y = 4.5;
 camera.lookAt(scene.position);
+
+
+
 
 
 

@@ -45,7 +45,7 @@ import { ref, reactive, onMounted } from 'vue';
         </div>
         <div class="logo">
           <p class="logo-title">Logo</p>
-          <img class="logo" src="logo" alt="">
+          <img class="logo" src={{logo}} alt="">
         </div>
         <div class="topping">
           <p class="topping-title">Topping</p>

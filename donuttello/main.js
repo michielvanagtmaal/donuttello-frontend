@@ -39,25 +39,41 @@ controls.maxDistance = 1;
 controls.autoRotatespeed = 30;
 controls.autoRotate = true;
 
-// add texture
-const textureloaderClient = new THREE.TextureLoader();
-const clientTexture = textureloaderClient.load('public/assets/images/logo.png');
 
 // user upload image
-
-/* function init(){
+ function uploadImage(){
+  console.log("image upload");
   document.getElementById("userImage").addEventListener("change", function(e){
     var userImage = e.target.files[0];
     var userImageURL = URL.createObjectURL(userImage);
 
-    var textureloaderClient = new THREE.TextureLoader();
-    loader.setCrossOrigin("");
-    var clientTexture = textureloaderClient.load(userImageURL);
+    const textureloaderClient = new THREE.TextureLoader();
+    const clientTexture = textureloaderClient.load(userImageURL);
+    
 
+    const geometry2 = new THREE.BoxGeometry( 0.15, 0.007, 0.08 );
+    const material2 = new THREE.MeshBasicMaterial( { map: clientTexture } );
+    const cube2 = new THREE.Mesh( geometry2, material2 );
+    cube2.position.set(-0.1, 0.199, -0.197);
+    cube2.rotation.x = -0.2;
+    cube2.rotation.y = -9;
+    scene.add( cube2 );
 
   }
     );
-} */
+}
+
+uploadImage();
+
+// card to put behind the image
+
+const card = new THREE.BoxGeometry( 0.19, 0.007, 0.12 );
+const cardMaterial = new THREE.MeshBasicMaterial( { color: 0xffffff } );
+const cardMesh = new THREE.Mesh( card, cardMaterial );
+cardMesh.position.set(-0.1, 0.198, -0.197);
+cardMesh.rotation.x = -0.2;
+cardMesh.rotation.y = -9;
+scene.add( cardMesh );
 
 
 
@@ -75,13 +91,7 @@ scene.add(directionalLight);
 
 
 
-const geometry2 = new THREE.BoxGeometry( 0.18, 0.007, 0.11 );
-const material2 = new THREE.MeshBasicMaterial( { map: clientTexture } );
-const cube2 = new THREE.Mesh( geometry2, material2 );
-cube2.position.set(-0.1, 0.199, -0.197);
-cube2.rotation.x = -0.2;
-cube2.rotation.y = -9;
-scene.add( cube2 );
+
 
 
 

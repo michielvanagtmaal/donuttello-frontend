@@ -1,7 +1,8 @@
 import './style.css'
 //import three
-import * as THREE from '/build/three.module.js';
-import { OrbitControls } from '/jsm/controls/OrbitControls'
+import * as THREE from 'three';
+//import orbit controls
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { Loader, Material } from 'three';
 // import gltf loader
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';

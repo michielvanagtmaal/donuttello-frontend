@@ -14,10 +14,10 @@ import Donut from "./Donut/Donut.js"
 const scene = new THREE.Scene();
 const sizes = {
   width: 800,
-  height: 600
+  height: 500
 }
 const camera = new THREE.PerspectiveCamera(
-  75,
+  50,
   sizes.width / sizes.height,
   0.1,
   1000
@@ -40,10 +40,42 @@ controls.autoRotatespeed = 30;
 controls.autoRotate = true;
 
 
+// user upload image
+ function uploadImage(){
+  console.log("image upload");
+  document.getElementById("userImage").addEventListener("change", function(e){
+    var userImage = e.target.files[0];
+    var userImageURL = URL.createObjectURL(userImage);
 
-// add texture
-const textureloaderClient = new THREE.TextureLoader();
-const clientTexture = textureloaderClient.load('public/assets/images/logo.png');
+    const textureloaderClient = new THREE.TextureLoader();
+    const clientTexture = textureloaderClient.load(userImageURL);
+    
+
+    const geometry2 = new THREE.BoxGeometry( 0.15, 0.007, 0.08 );
+    const material2 = new THREE.MeshBasicMaterial( { map: clientTexture } );
+    const cube2 = new THREE.Mesh( geometry2, material2 );
+    cube2.position.set(-0.1, 0.199, -0.197);
+    cube2.rotation.x = -0.2;
+    cube2.rotation.y = -9;
+    scene.add( cube2 );
+
+  }
+    );
+}
+
+uploadImage();
+
+// card to put behind the image
+
+const card = new THREE.BoxGeometry( 0.19, 0.007, 0.12 );
+const cardMaterial = new THREE.MeshBasicMaterial( { color: 0xffffff } );
+const cardMesh = new THREE.Mesh( card, cardMaterial );
+cardMesh.position.set(-0.1, 0.198, -0.197);
+cardMesh.rotation.x = -0.2;
+cardMesh.rotation.y = -9;
+scene.add( cardMesh );
+
+
 
 // add ambient light
 
@@ -58,13 +90,8 @@ directionalLight.position.set(0, 1, 0);
 scene.add(directionalLight);
 
 
-const geometry2 = new THREE.BoxGeometry( 0.18, 0.007, 0.11 );
-const material2 = new THREE.MeshBasicMaterial( { map: clientTexture } );
-const cube2 = new THREE.Mesh( geometry2, material2 );
-cube2.position.set(-0.1, 0.199, -0.197);
-cube2.rotation.x = -0.2;
-cube2.rotation.y = -9;
-scene.add( cube2 );
+
+
 
 
 
@@ -170,8 +197,12 @@ loader3.load("/assets/lowpolydonut_sprinkles.glb", (gltf) => {
 var btnSprinkles = document.getElementById("btnSprinkles");
 btnSprinkles.addEventListener("click", () => {
   console.log("clicked");
+  if (sprinkles.scale.x == 0) {
     sprinkles.scale.set(9.1, 9.1, 9.1);
-  });
+  } else { 
+    sprinkles.scale.set(0, 0, 0);
+
+ } });
 
 });
 

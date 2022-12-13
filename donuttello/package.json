@@ -10,7 +10,6 @@
   },
   
   "dependencies": {
-    "type": "module",
     "three": "^0.147.0",
     "vue": "^3.2.45"
   },

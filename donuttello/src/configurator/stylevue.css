@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+@font-face {
+  font-family: 'Museo Sans 700';
+  font-weight: 700;
+  src: url(/assets/Fonts/MuseoSans_700/MuseoSans_700.otf) format('otf'),;
+}
+@font-face {
+  font-family: 'Lucida Console Regular';
+  src: url(/assets/Fonts/Lucida_Console_Regular/Lucida_Console.ttf) format('ttf');
+}
+body {
+  background-color: #FF98C9;
+}
+
+header {
+  background-image: url(../../public/assets/images/donuttello_grid.png);
+  box-shadow: inset -2px -2px 0px #262626, inset 2px 2px 0px #F0F0F0, inset -4px -4px 0px #7E7E7E;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/*desktop*/
+.container {
+  display: inline-grid;
+  grid-template-columns: 50px 255px  285px  200px 200px;
+  grid-template-rows: 50px 60px 50px 60px 50px;
+  grid-template-areas: 
+    ". . . . ."
+    ". customer_name glazuur logo aantal"
+    ". donut glazuur  logo aantal"
+    ". donut topping status email"
+    ". donut topping status email"
+  /*background-color: #7E7E7E;*/
+  }
+
+.donut {
+  margin: auto;
+  margin-left: 0px;
+  width: 60%;
+  height: 60%;
+  grid-area: donut;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.customer_name {
+  grid-area: customer_name;
+  font-size: 1.5em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace; 
+  margin: auto;
+  margin-left: 0;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.glazuur {
+  grid-area: glazuur;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.glazuur-thing{
+  font-size: 1em;
+  font-family: 'Lucida Console Regular', monospace;
+}
+.glazuur-title{
+  font-size: 1.5em;
+  margin-top: 10px;
+  margin-left: 0;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular';
+}
+.topping {
+  grid-area: topping;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.topping-thing{
+  font-size: 1em;
+  font-family: 'Lucida Console Regular',monospace;
+}
+.topping-title{
+  font-size: 1.5em;
+  margin-top: 10px;
+  margin-left: 0;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
+}
+.aantal {
+  grid-area: aantal;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.aantal-thing{
+  font-size: 1em;
+  font-family: 'Lucida Console Regular', monospace;
+}
+.aantal-title{
+  font-size: 1.5em;
+  margin-top: 10px;
+  margin-left: 0;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
+}
+.email {
+  grid-area: email;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.email-title{
+  font-size: 1.5em;
+  margin-top: 10px;
+  margin-left: 0;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
+}
+.email-thing{
+  font-size: 1em;
+  font-family: 'Lucida Console Regular', monospace;
+}
+.status {
+  grid-area: status;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.status-thing{
+  font-size: 1em;
+  font-family: 'Lucida Console Regular', monospace;
+}
+.status-title{
+  font-size: 1.5em;
+  margin-top: 10px;
+  margin-left: 0;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
+}
+.logo {
+  grid-area: logo;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+  width:  50% ;
+  height: 50%;
+}
+.logo-title{
+  font-size: 1.5em;
+  margin-top: 10px;
+  margin-left: 0;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
+}
+/*tablet*/
+@media only screen and (max-width: 1280px) {
+  .container {
+    display: inline-grid;
+    grid-template-columns: 30px 180px  180px  180px;
+    grid-template-rows: 22.5px 60px 60px 60px 60px 60px 60px;
+    grid-template-areas: 
+      ". . . ."
+      ". customer_name glazuur logo"
+      ". donut glazuur  logo"
+      ". donut topping status"
+      ". donut topping status"
+      ". aantal  email ."
+      ". aantal  email .";
+    /*background-color: #7E7E7E;*/
+    }
+  
+  .donut {
+    width: 80%;
+    height: 70%;
+    grid-area: donut;
+    /*position: relative;
+    top: 60px;
+    left: 40px;*/
+  }
+  .customer_name {
+    grid-area: customer_name;
+    font-size: 1.25em;
+    margin-top: 20px;
+    margin-left: 0;
+    font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace; 
+    /*position: relative;
+    top: 60px;
+    left: 40px;*/
+  }
+  .glazuur {
+    grid-area: glazuur;
+    /*position: relative;
+    top: 60px;
+    left: 40px;*/
+  }
+  .glazuur-thing{
+    font-size: 1em;
+    font-family: 'Lucida Console Regular', monospace;
+  }
+  .glazuur-title{
+    font-size: 1.25em;
+    margin-top: 20px;
+    margin-left: 0;
+    font-family: 'Museo Sans 700', 'Lucida Console Regular';
+  }
+  .topping {
+    grid-area: topping;
+    /*position: relative;
+    top: 60px;
+    left: 40px;*/
+  }
+  .topping-thing{
+    font-size: 1em;
+    font-family: 'Lucida Console Regular',monospace;
+  }
+  .topping-title{
+    font-size: 1.25em;
+    margin-top: 20px;
+    margin-left: 0;
+    font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
+  }
+  .aantal {
+    grid-area: aantal;
+    /*position: relative;
+    top: 60px;
+    left: 40px;*/
+  }
+  .aantal-thing{
+    font-size: 1em;
+    font-family: 'Lucida Console Regular', monospace;
+  }
+  .aantal-title{
+    font-size: 1.25em;
+    margin-top: 20px;
+    margin-left: 0;
+    font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
+  }
+  .email {
+    grid-area: email;
+    /*position: relative;
+    top: 60px;
+    left: 40px;*/
+  }
+  .email-title{
+    font-size: 1.25em;
+    margin-top: 20px;
+    margin-left: 0;
+    font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
+  }
+  .email-thing{
+    font-size: 1em;
+    font-family: 'Lucida Console Regular', monospace;
+  }
+  .status {
+    grid-area: status;
+    /*position: relative;
+    top: 60px;
+    left: 40px;*/
+  }
+  .status-thing{
+    font-size: 1em;
+    font-family: 'Lucida Console Regular', monospace;
+  }
+  .status-title{
+    font-size: 1.25em;
+    margin-top: 20px;
+    margin-left: 0;
+    font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
+  }
+  .logo {
+    grid-area: logo;
+    /*position: relative;
+    top: 60px;
+    left: 40px;*/
+    width:  60% ;
+    height: 60%;
+  }
+  .logo-title{
+    font-size: 1.25em;
+    margin-top: 20px;
+    font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
+  }
+  }
+  
+
+
+/*mobile*/
+/*put .order form in the middle of a 1080px wide screen*/
+@media only screen and (max-width: 601px) {
+.container {
+  display: inline-grid;
+  grid-template-columns: 20px 120px  120px  120px;
+  grid-template-rows: 25px 50px 50px 50px 50px 50px 50px;
+  grid-template-areas: 
+    ". . . ."
+    ". customer_name glazuur logo"
+    ". donut glazuur  logo"
+    ". donut topping status"
+    ". donut topping status"
+    ". aantal  email ."
+    ". aantal  email .";
+  /*background-color: #7E7E7E;*/
+  }
+
+.donut {
+  width: 80%;
+  height: 50%;
+  grid-area: donut;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.customer_name {
+  grid-area: customer_name;
+  font-size: 1.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace; 
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.glazuur {
+  grid-area: glazuur;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.glazuur-thing{
+  font-size: 1em;
+  font-family: 'Lucida Console Regular', monospace;
+}
+.glazuur-title{
+  font-size: 1.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular';
+}
+.topping {
+  grid-area: topping;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.topping-thing{
+  font-size: 1em;
+  font-family: 'Lucida Console Regular',monospace;
+}
+.topping-title{
+  font-size: 1.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
+}
+.aantal {
+  grid-area: aantal;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.aantal-thing{
+  font-size: 1em;
+  font-family: 'Lucida Console Regular', monospace;
+}
+.aantal-title{
+  font-size: 1.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
+}
+.email {
+  grid-area: email;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.email-title{
+  font-size: 1.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
+}
+.email-thing{
+  font-size: 1em;
+  font-family: 'Lucida Console Regular', monospace;
+}
+.status {
+  grid-area: status;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
+.status-thing{
+  font-size: 1em;
+  font-family: 'Lucida Console Regular', monospace;
+}
+.status-title{
+  font-size: 1.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
+}
+.logo {
+  grid-area: logo;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+  width:  60% ;
+  height: 60%;
+}
+.logo-title{
+  font-size: 1.25em;
+  font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
+}
+}

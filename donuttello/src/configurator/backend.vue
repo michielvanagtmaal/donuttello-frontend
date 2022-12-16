@@ -1,6 +1,6 @@
 <script setup>
   import DonutConfig from './components/DonutConfig.vue'
-  import ThreeD from './components/Donut3D.vue'
+  import ThreeD from './components/DonutThreeD.vue'
 
 </script>
 

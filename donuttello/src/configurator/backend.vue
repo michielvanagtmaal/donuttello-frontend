@@ -1,12 +1,12 @@
 <script setup>
   import DonutConfig from './components/DonutConfig.vue'
-  import ThreeD from './components/DonutThreeD.vue'
+  import ThreeD from './components/Donut3D.vue'
 
 </script>
 
 <template>
   <div class="app">
     <DonutConfig class="order" />
-    <ThreeD class="threeD" />
+    <ThreeD class="order" />
   </div>
 </template>

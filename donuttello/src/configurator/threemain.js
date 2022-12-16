@@ -10,7 +10,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import Donut from "../../Donut/Donut.js"
 
 //const donut = new Donut(document.querySelector(".donut-canvas"));
-
+console.log("working")
 const scene = new THREE.Scene();
 const sizes = {
   width: 800,

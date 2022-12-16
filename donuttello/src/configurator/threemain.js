@@ -7,7 +7,7 @@ import { Loader, Material } from 'three';
 // import gltf loader
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
-import Donut from "./Donut/Donut.js"
+import Donut from "../../Donut/Donut.js"
 
 //const donut = new Donut(document.querySelector(".donut-canvas"));
 

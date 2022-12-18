@@ -4,7 +4,7 @@
         {
             "customer": "Steve",
             "glazuur": "ee8f2a",
-            "logo": "/assets/images/donut_img.png",
+            "logo": "../../../public/assets/images/donut_img.png",
             "topping": "yellow sprinkles",
             "status": "in behandeling",
             "aantal": "250",
@@ -13,7 +13,7 @@
         {
             "customer": "Alex",
             "glazuur": "efr52a",
-            "logo": "/assets/images/donut_img.png",
+            "logo": "../../../public/assets/images/donut_img.png",
             "topping": "green sprinkles",
             "status": "Afgehandeld",
             "aantal": "550",

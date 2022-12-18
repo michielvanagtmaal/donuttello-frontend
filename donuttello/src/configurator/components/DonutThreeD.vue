@@ -164,6 +164,14 @@ function animate() {
 	renderer.render( scene, camera );
 };
 	animate();
+
+
+document.getElementById("submit").onclick = function () {
+location.href = "../backend/index.html";
+};  
+
+
+
 </script>
 
 

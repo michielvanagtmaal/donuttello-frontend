@@ -10,3 +10,26 @@
 [1211/190228.992:ERROR:crash_report_database_win.cc(428)] unexpected header
 [1212/205147.647:ERROR:settings.cc(325)] Settings version is not 1
 [1212/205147.649:ERROR:crash_report_database_win.cc(428)] unexpected header
+[1213/162138.991:ERROR:settings.cc(325)] Settings version is not 1
+[1213/162138.994:ERROR:crash_report_database_win.cc(428)] unexpected header
+[1213/232551.443:ERROR:crash_report_database_win.cc(428)] unexpected header
+[1213/233133.859:ERROR:crash_report_database_win.cc(428)] unexpected header
+[1213/233350.896:ERROR:crash_report_database_win.cc(428)] unexpected header
+[1213/235325.271:ERROR:crash_report_database_win.cc(428)] unexpected header
+[1213/235545.854:ERROR:crash_report_database_win.cc(428)] unexpected header
+[1215/121536.261:ERROR:crash_report_database_win.cc(428)] unexpected header
+<<<<<<< HEAD
+<<<<<<< HEAD
+[1216/120255.536:ERROR:settings.cc(325)] Settings version is not 1
+[1216/120255.540:ERROR:crash_report_database_win.cc(428)] unexpected header
+[1216/163454.556:ERROR:crash_report_database_win.cc(428)] unexpected header
+=======
+>>>>>>> parent of f45bf14 (FIX: the selection panel is now displaying again, everything else is currently broken)
+=======
+>>>>>>> parent of f45bf14 (FIX: the selection panel is now displaying again, everything else is currently broken)
+[1216/172532.811:ERROR:crash_report_database_win.cc(428)] unexpected header
+[1216/180327.069:ERROR:crash_report_database_win.cc(428)] unexpected header
+[1217/175109.555:ERROR:settings.cc(325)] Settings version is not 1
+[1217/175109.557:ERROR:crash_report_database_win.cc(428)] unexpected header
+[1218/170320.455:ERROR:settings.cc(325)] Settings version is not 1
+[1218/170320.457:ERROR:crash_report_database_win.cc(428)] unexpected header

@@ -34,7 +34,7 @@ import { ref, reactive, onMounted } from 'vue';
 <template>
    <div class="container">
         <p class="customer_name">{{customer_name}}</p>
-        <img class="donut" src="assets/images/donut_img.png" alt="">
+        <img class="donut" src="../../../public/assets/images/donut_img.png" alt="">
         <div class="aantal">
           <p class="aantal-title">Aantal</p>
           <p class="aantal-thing">{{aantal}}</p>

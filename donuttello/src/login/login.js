@@ -25,5 +25,4 @@ var btnLogin = document.querySelector(".login__btn").addEventListener("click", (
     }
 })
 });
-
-// 
+ 

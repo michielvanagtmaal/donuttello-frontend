@@ -1,4 +1,3 @@
-<script>
 var btnLogin = document.querySelector(".login__btn").addEventListener("click", (e) => {
     let username = document.querySelector('#email').value;
     let password = document.querySelector('#password').value;
@@ -18,7 +17,7 @@ var btnLogin = document.querySelector(".login__btn").addEventListener("click", (
     if (json.status === "success") {
         let token = json.data.token;
         localStorage.setItem("token", token);
-        window.location.href = "backend.vue";
+        window.location.href = "./../backend/backend.html";
     } else {
         let feedback = document.querySelector(".alert");
         feedback.textContent = "Login failed buddy.";
@@ -26,10 +25,3 @@ var btnLogin = document.querySelector(".login__btn").addEventListener("click", (
     }
 })
 });
-
-</script>
-
-
-<template>
-     
-</template>

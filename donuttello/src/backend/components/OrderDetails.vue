@@ -21,6 +21,7 @@ import { ref, reactive, onMounted } from 'vue';
             customer_name.value =  data.order[0].customer;
             aantal.value = data.order[0].aantal;
             logo.value = data.order[0].logo;
+            console.log(logo.value);
             topping.value = data.order[0].topping;
             status.value = data.order[0].status;
             email.value = data.order[0].email;
@@ -45,7 +46,7 @@ import { ref, reactive, onMounted } from 'vue';
         </div>
         <div class="logo">
           <p class="logo-title">Logo</p>
-          <img class="logo" src={{logo}} alt="">
+          <img class="logo" :src="`../../../public${logo}`" alt="">
         </div>
         <div class="topping">
           <p class="topping-title">Topping</p>

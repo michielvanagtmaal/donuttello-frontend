@@ -63,4 +63,7 @@ import { ref, reactive, onMounted } from 'vue';
           </div>
         </div>  
       </div>
+  <p class="bedankt">
+    <a href="#">remove order</a>
+  </p>
 </template>

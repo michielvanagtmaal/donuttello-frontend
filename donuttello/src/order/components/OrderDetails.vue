@@ -63,4 +63,5 @@ import { ref, reactive, onMounted } from 'vue';
           </div>
         </div>  
       </div>
+    <p class="bedankt">Bedankt voor u bestelling</p>
 </template>

@@ -147,6 +147,17 @@ header {
   margin-left: 0;
   font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
 }
+.bedankt {
+  font-size: 1em;
+  font-family: 'Lucida Console Regular', monospace;
+  margin: auto;
+  margin-left: 0;
+  position: relative;
+  right: -730px;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
+}
 /*tablet*/
 @media only screen and (max-width: 1280px) {
   .container {
@@ -275,6 +286,17 @@ header {
     margin-top: 20px;
     font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
   }
+  .bedankt {
+    font-size: 1em;
+    font-family: 'Lucida Console Regular', monospace;
+    margin: auto;
+    margin-left: 0;
+    position: relative;
+    right: -300px;
+    /*position: relative;
+    top: 60px;
+    left: 40px;*/
+  }
   }
   
 
@@ -394,6 +416,17 @@ header {
 .logo-title{
   font-size: 1.25em;
   font-family: 'Museo Sans 700', 'Lucida Console Regular', monospace;
+}
+.bedankt {
+  font-size: 1em;
+  font-family: 'Lucida Console Regular', monospace;
+  margin: auto;
+  margin-left: 0;
+  position: relative;
+  right: -150px;
+  /*position: relative;
+  top: 60px;
+  left: 40px;*/
 }
 }
 

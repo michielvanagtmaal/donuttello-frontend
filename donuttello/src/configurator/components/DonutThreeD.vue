@@ -167,7 +167,7 @@ function animate() {
 
 
 document.getElementById("submit").onclick = function () {
-location.href = "../backend/index.html";
+location.href = "../order/index.html";
 };  
 
 

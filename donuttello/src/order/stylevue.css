@@ -153,11 +153,10 @@ header {
   margin: auto;
   margin-left: 0;
   position: relative;
-  right: -842px;
+  right: -730px;
   /*position: relative;
   top: 60px;
   left: 40px;*/
-  color: red;
 }
 /*tablet*/
 @media only screen and (max-width: 1280px) {
@@ -293,11 +292,10 @@ header {
     margin: auto;
     margin-left: 0;
     position: relative;
-    right: -400px;
+    right: -300px;
     /*position: relative;
     top: 60px;
     left: 40px;*/
-    color: red;
   }
   }
   
@@ -425,8 +423,7 @@ header {
   margin: auto;
   margin-left: 0;
   position: relative;
-  right: -260px;
-  color: red;
+  right: -150px;
   /*position: relative;
   top: 60px;
   left: 40px;*/

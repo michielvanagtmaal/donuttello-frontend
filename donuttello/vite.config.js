@@ -10,6 +10,7 @@ export default defineConfig({
         main : resolve(__dirname, 'index.html'),
         config : resolve(__dirname, './src/configurator/index.html'),
         backend : resolve(__dirname, './src/backend/index.html'),
+        order : resolve(__dirname, './src/order/index.html'),
         login : resolve(__dirname, './src/login/index.html'),
       },
     },

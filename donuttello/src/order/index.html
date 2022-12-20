@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+
+    <link rel="stylesheet" href="normalise.css">
+    <link rel="stylesheet" href="stylebackend.css">
+    
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+      <img src="/assets/images/donuttello_logo.png" alt="donuttello logo">
+    </div>
+    <input type="checkbox" id="hamburger-input" class="burger-shower" />
+
+<!-- 
+  We use a `label` element with the `for` attribute 
+  with the same value as  our label `id` attribute 
+-->
+<label id="hamburger-menu" for="hamburger-input">
+  <nav id="sidebar-menu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Menu</a></li>
+      <li><a href="configurator.html">Donutmaker</a></li>
+      <li><a href="#">Locaties</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</label>
+
+<!-- 
+  Adding an overlay to show a dark 
+  background when the menu appears
+-->
+<div class="overlay"></div>
+</header>
+
+    <div class="order_form">
+      <div id="app"></div>
+      <script type="module" src="main.js"></script>
+    </div>
+
+  <footer>
+    <p>© Copyright — Dunottello 2022.</p>
+  </footer>
+
+</body>
+</html>

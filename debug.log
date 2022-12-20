@@ -37,3 +37,6 @@
 [1218/225522.515:ERROR:crash_report_database_win.cc(428)] unexpected header
 [1218/231533.542:ERROR:settings.cc(325)] Settings version is not 1
 [1218/231533.543:ERROR:crash_report_database_win.cc(428)] unexpected header
+[1218/235711.447:ERROR:crash_report_database_win.cc(428)] unexpected header
+[1220/173658.476:ERROR:settings.cc(325)] Settings version is not 1
+[1220/173658.479:ERROR:crash_report_database_win.cc(428)] unexpected header

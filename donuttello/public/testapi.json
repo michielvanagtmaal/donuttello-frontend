@@ -2,13 +2,13 @@
     "status": "success",
     "order": [
         {
-            "customer": "Steve",
-            "glazuur": "ee8f2a",
-            "logo": "../../../public/assets/images/donut_img.png",
-            "topping": "yellow sprinkles",
+            "customer": "Thomas More",
+            "glazuur": "Blauw",
+            "logo": "../../../public/assets/images/image_4.png",
+            "topping": "Sprinkles",
             "status": "in behandeling",
             "aantal": "250",
-            "email": "google@gmail.com"
+            "email": "info@thomasmore.be"
         },
         {
             "customer": "Alex",
